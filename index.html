@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Planning for Success - Unlock Your Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /*
+        * COLOR PALETTE & GLOBAL STYLES
+        */
+        :root {
+            /* Main Background */
+            --color-light-gray: #F8F8F8;
+            /* Primary Colors */
+            --color-royal-blue: #2E4DA7; /* Trust, Authority */
+            --color-sky-blue: #6EB0FF; /* Friendly, Approachable */
+            --color-teal: #2AB3C7; /* Calming, Modern */
+            /* Accent Colors (CTAs) */
+            --color-golden: #FFC857; /* Urgency, Exclusivity (Primary CTA) */
+            --color-coral: #FF6F61; /* Action, Warmth (Secondary/Pulsating) */
+            --color-peach: #FFA94D; /* Encouraging (Subtle) */
+            /* Text Colors */
+            --color-dark-charcoal: #333333; /* Primary Readability */
+            --color-off-white: #EAEAEA;
+            --color-white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--color-light-gray);
+            color: var(--color-dark-charcoal);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h1, h2, h3 {
+            color: var(--color-royal-blue);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        
+        /* Typography adjustments for readability and impact */
+        h1 { font-size: 2.8em; font-weight: 800; }
+        h2 { font-size: 2.2em; }
+        h3 { font-size: 1.8em; }
+        p { font-size: 1.05em; }
+
+        /*
+        * BUTTON STYLES
+        */
+        .cta-button {
+            display: inline-block;
+            padding: 18px 35px; /* Larger hit area */
+            font-size: 1.25em; /* Impactful text */
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: none;
+            text-transform: uppercase;
+        }
+
+        .cta-primary {
+            background-color: var(--color-golden);
+            color: var(--color-dark-charcoal);
+        }
+
+        .cta-primary:hover {
+            background-color: #e5b244;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-pulsate {
+            background-color: var(--color-coral);
+            color: var(--color-white);
+            box-shadow: 0 0 10px var(--color-coral), 0 0 20px var(--color-coral);
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        .cta-pulsate:hover {
+            background-color: #e65e53;
+            animation-play-state: paused;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 5px var(--color-coral), 0 0 10px var(--color-coral);
+            }
+            100% {
+                box-shadow: 0 0 15px var(--color-coral), 0 0 30px var(--color-coral);
+            }
+        }
+        
+        /*
+        * HERO SECTION
+        */
+        .hero {
+            background-color: var(--color-royal-blue);
+            color: var(--color-white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--color-golden);
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero p {
+            font-size: 1.4em;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+        
+        .hero h2 {
+            color: var(--color-off-white);
+            font-size: 1.6em;
+            font-weight: 400;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        /*
+        * ABOUT BOOK SECTION
+        */
+        .about-book {
+            background-color: var(--color-white);
+        }
+
+        .book-layout {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .book-image-area {
+            flex: 0 0 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--color-light-gray);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .book-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: var(--color-sky-blue);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: 1.2em;
+            font-weight: 600;
+            border: 5px solid var(--color-white);
+        }
+
+        .book-text {
+            flex: 1;
+        }
+
+        .book-text h2 {
+            margin-bottom: 25px;
+            color: var(--color-teal);
+        }
+        
+        /* Psychological Triggering Callout (Regret/Loss Aversion) */
+        .psych-callout {
+            background-color: var(--color-peach);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #7b4e23;
+            border-left: 5px solid var(--color-coral);
+        }
+
+        /*
+        * HOW THE BOOK HELPS SECTION (Commitment/Consistency)
+        */
+        .book-help {
+            background-color: var(--color-royal-blue);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .book-help h2 {
+            color: var(--color-golden);
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .help-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        /*
+        * MICRO-COMMITMENT SECTION (Foot-in-the-Door Technique)
+        */
+        .micro-commit {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--color-light-gray);
+        }
+
+        .micro-commit h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: var(--color-dark-charcoal);
+        }
+        
+        /*
+        * REVIEWS SECTION (Social Proof)
+        */
+        .reviews-section {
+            background-color: var(--color-sky-blue);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .reviews-section h2 {
+            color: var(--color-white);
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .review-count {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: var(--color-off-white);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            background-color: var(--color-white);
+            color: var(--color-dark-charcoal);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            min-height: 180px; /* Uniform height for arrangement */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-stars {
+            color: var(--color-golden);
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 10px;
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            font-size: 0.9em;
+            color: var(--color-royal-blue);
+            margin-top: auto; /* Push to bottom */
+        }
+
+        /*
+        * ABOUT AUTHORS SECTION (Humanity/Relatability)
+        */
+        .about-authors {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .authors-heading {
+            font-size: 2.2em;
+            margin-bottom: 50px;
+            color: var(--color-teal);
+        }
+
+        .authors-photos {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .author-photo-container {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            padding: 5px;
+            box-shadow: 0 0 0 6px var(--color-white), 0 6px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .author-photo-1 {
+            z-index: 2;
+        }
+
+        .author-photo-2 {
+            position: relative;
+            left: -40px; /* Slight intersection */
+            z-index: 1;
+        }
+
+        .author-photo-container:hover {
+            transform: scale(1.05);
+        }
+
+        .author-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: var(--color-light-gray);
+            border: 2px dashed var(--color-royal-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            color: var(--color-royal-blue);
+            font-weight: 600;
+        }
+
+        .author-bio {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15em;
+            font-weight: 400;
+        }
+
+        /*
+        * FINAL CTA/INSTRUCTIONS (Exclusivity/Scarcity)
+        */
+        .final-cta-section {
+            background-color: var(--color-royal-blue);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .final-cta-section h3 {
+            color: var(--color-golden);
+            font-size: 2.2em;
+            margin-bottom: 25px;
+        }
+
+        .final-cta-text {
+            color: var(--color-off-white);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        /*
+        * MODAL (POPUP) STYLES
+        */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            padding-top: 50px;
+        }
+
+        .modal-content {
+            background-color: var(--color-white);
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 90%;
+            width: 650px;
+            animation: fadeIn 0.3s;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close-button {
+            color: var(--color-dark-charcoal);
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--color-coral);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        
+
+        /* Micro-Commitment Modal */
+        #micro-commit-modal h3 {
+            color: var(--color-royal-blue);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.7em;
+        }
+        
+        .option-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .option-item {
+            cursor: pointer;
+            padding: 15px 10px;
+            background-color: var(--color-light-gray);
+            border-radius: 8px;
+            transition: background-color 0.2s, transform 0.1s;
+            font-size: 1em;
+            font-weight: 500;
+            border: 2px solid transparent;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .option-item:hover {
+            background-color: var(--color-sky-blue);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        
+        .selected-answer {
+            text-align: center;
+        }
+        
+        .selected-answer h3 {
+            color: var(--color-teal);
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .selected-answer p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        
+        
+        /* Unlock Modal */
+        #unlock-modal .image-stack {
+            /* Changed to flex-direction: column for vertical stacking */
+            display: flex;
+            flex-direction: column; 
+            align-items: center; /* Center items horizontally */
+            margin-bottom: 40px;
+            gap: 20px; /* Space between the two stacked elements */
+        }
+        
+        #unlock-modal .image-stack div {
+            /* Resetting some old styles for stacking */
+            width: 90%; /* Wide width for responsiveness */
+            height: auto; 
+            margin: 0; /* Remove negative margin */
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            text-align: center;
+            overflow: hidden; 
+        }
+
+        /* Style for the wide image preview */
+        #unlock-modal .image-stack .book-img-bottom {
+            z-index: 1;
+            background-color: var(--color-sky-blue);
+            color: var(--color-white);
+            font-size: 0.9em;
+            min-height: 150px; /* Set a minimum height for the image area */
+        }
+        
+        #unlock-modal .image-stack .book-img-bottom img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        /* Style for the top (title) block */
+        #unlock-modal .image-stack .book-img-top {
+            z-index: 2;
+            transform: none; /* Remove previous translation */
+            background-color: var(--color-royal-blue);
+            color: var(--color-golden);
+            font-size: 1.2em; /* Made text slightly bigger for impact */
+            padding: 20px; /* Increased padding */
+            box-sizing: border-box;
+            min-height: 80px;
+        }
+        
+        /* New class for the instruction text */
+        .instruction-text {
+            width: 90%;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--color-dark-charcoal);
+        }
+
+        #unlock-modal h3 {
+            color: var(--color-coral);
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        /*
+        * RESPONSIVENESS (Mobile-first optimization)
+        */
+        @media (max-width: 900px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            h3 { font-size: 1.5em; }
+            p { font-size: 1em; }
+            
+            .cta-button {
+                padding: 15px 25px;
+                font-size: 1.1em;
+            }
+
+            .hero { padding: 60px 0; }
+            .hero p { font-size: 1.1em; }
+
+            .book-layout {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            .book-image-area {
+                flex: none;
+                width: 100%;
+                max-width: 300px;
+            }
+            .book-placeholder {
+                height: 350px;
+            }
+            .book-text h2 {
+                text-align: center;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .authors-photos {
+                margin-bottom: 30px;
+            }
+            .author-photo-container {
+                width: 120px;
+                height: 120px;
+            }
+            .author-photo-2 {
+                left: -20px; 
+            }
+            
+            .option-list {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                padding: 30px;
+                width: 90%;
+            }
+            
+            /* Ensure modal elements are still wide and centered on mobile */
+            #unlock-modal .image-stack div {
+                width: 100%;
+                max-width: 350px; /* Capping width slightly to look better in a modal */
+            }
+            .instruction-text {
+                width: 100%;
+                max-width: 350px; 
+            }
+        }
+    
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Most People Fail at Their Goals for One Reason.</h1>
+            <p><strong>It’s not talent or ambition—it’s the one invisible skill that separates dreamers from achievers: planning. A Better Plan Beats Talent, Motivation, and Luck Every Time</strong></p>
+            <h2 id="unlock-prompt">Secure Your Copy Before the Promotion Ends</h2>
+            <button onclick="document.getElementById('unlock-modal').style.display='block'" class="cta-button cta-pulsate">
+                Unlock Your Freedom to Success Today
+            </button>
+        </div>
+    </header>
+
+    <section class="about-book">
+        <div class="container book-layout">
+            <div class="book-image-area">
+                <div class="book-placeholder">
+                    <img src="image/New Project - 2025-12-04T141851.688.jpg"">
+                </div>
+                <p style="font-size:0.9em; color: #555;">**The Art of Planning for Success**</p>
+            </div>
+            <div class="book-text">
+                <h2>About The Book: Stop Drifting, Start Achieving.</h2>
+                <p><strong>Let's be honest:</strong> You have big dreams and work hard, yet feel stuck and overwhelmed. The missing link isn’t talent—it’s intentional planning. Your goals aren’t the problem; lack of structure is. This book is your blueprint to bridge the gap between desire and achievement. Learn to be truly productive, design purposeful days and months, and connect every action to a bigger, unstoppable life vision.</p>
+                                                
+                <div class="psych-callout">
+                    <p>🔥 The Regret Trap: Imagine looking back a year from now, wishing you had taken this simple step. Don’t let future you down—take control now, effortlessly.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="micro-commit">
+        <div class="container">
+            <h3>Let’s discover how this guide can transform your life</h3>
+            <button id="micro-commit-button" onclick="document.getElementById('micro-commit-modal').style.display='block'" class="cta-button cta-primary">
+                I Refuse to Stay Stuck
+            </button>
+        </div>
+    </section>
+    
+    <hr>
+
+    <section class="book-help">
+        <div class="container">
+            <h2>How This Book Guarantees a New and Better Version of Yourself</h2>
+            <div class="help-text">
+                <p>This guide is a low-effort, high-reward roadmap. Covering the 13 key areas people struggle with, it delivers simple steps for clarity, focus, and fast execution. Consider it an exclusive favor to help you confidently achieve your goals—we’re committed to your success.</p>
+            </div>
+        </div>
+    </section>
+    
+    <hr>
+
+    <section class="reviews-section">
+        <div class="container">
+            <h2>Trusted by Thousands of Achievers</h2>
+            <p class="review-count">1000+ used and trusted by people like you who needed structure.</p>
+            <div class="reviews-grid">
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I finally beat procrastination! The challenge gave me the execution speed I needed. Simple to follow."</p>
+                    <p class="reviewer-name">- Sarah M.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">"My time management was a disaster. Now I have daily productivity locked down. No more overthinking!"</p>
+                    <p class="reviewer-name">- Alex C.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The mindset shift on **clarity vs. motivation was huge. My **confidence** is through the roof. I finally see the **long-term vision**."</p>
+                    <p class="reviewer-name">- Jamie L.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">"It’s refreshingly human. The section on **discipline & consistency** made me realize I was massively overcomplicating things."</p>
+                    <p class="reviewer-name">- Ben P.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I struggled with **decision-making**. The frameworks made it easy to take **action fast** and finally track my **progress** effectively."</p>
+                    <p class="reviewer-name">- Chloe R.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    
+    <section class="about-authors">
+        <div class="container">
+            <h2 class="authors-heading">Meet the People Behind Your Blueprint</h2>
+            
+            <div class="authors-photos">
+                <div class="author-photo-container author-photo-1">
+                    <div class="author-img"><img src="image/New Project - 2025-12-04T151301.347.jpg" alt=""></div>
+                </div>
+                <div class="author-photo-container author-photo-2">
+                    <div class="author-img"><img src="image/profile.jpg" alt=""></div>
+                </div>
+            </div>
+            
+            <p class="author-bio">
+                <p>We’re not gurus—we’ve been where you are. Big ideas, no roadmap. We learned planning is the key to freedom. We value real life, balance, and simple systems, and we’re here to help you stop struggling and start building.</p>
+            </p>
+        </div>
+    </section>
+    
+    <hr>
+
+    <section class="final-cta-section">
+        <div class="container">
+            <h3>Getting Started is the Easiest Step You'll Take.</h3>
+            <p class="final-cta-text">
+                This isn’t about hard work—it’s a step toward an easier, clearer future. This exclusive tool puts you ahead of most people. Effortless instructions, future you will thank you. Claim your blueprint now.
+            </p>
+            <button onclick="document.getElementById('unlock-modal').style.display='block'" class="cta-button cta-pulsate">
+                Unlock Your Freedom to Success Today
+            </button>
+        </div>
+    </section>
+
+    <div id="micro-commit-modal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('micro-commit-modal')" class="close-button">&times;</span>
+            <div id="initial-options">
+                <h3>Choose the area you want to improve in **first** (Just one click to start your transformation!)</h3>
+                <ul class="option-list">
+                    <li class="option-item" data-topic="Clarity on Life Purpose / Mission – knowing what they truly want">Clarity on Life Purpose</li>
+                    <li class="option-item" data-topic="Discipline & Consistency – sticking to routines, habits, plans">Discipline & Consistency</li>
+                    <li class="option-item" data-topic="Decision-Making – avoiding mistakes and indecision">Decision-Making</li>
+                    <li class="option-item" data-topic="Time Management / Daily Productivity – getting more done efficiently">Time Management / Productivity</li>
+                    <li class="option-item" data-topic="Overcoming Fear & Procrastination – starting and finishing important tasks">Overcoming Procrastination</li>
+                    <li class="option-item" data-topic="Focus & Concentration – avoiding distractions, deep work">Focus & Concentration</li>
+                    <li class="option-item" data-topic="Goal-Setting Skills – breaking big goals into actionable steps">Goal-Setting Skills</li>
+                    <li class="option-item" data-topic="Accountability / Tracking Progress – measuring success and staying on track">Accountability / Progress</li>
+                    <li class="option-item" data-topic="Motivation / Mindset – maintaining drive even during setbacks">Motivation / Mindset</li>
+                    <li class="option-item" data-topic="Confidence & Self-Belief – trusting themselves to achieve goals">Confidence & Self-Belief</li>
+                    <li class="option-item" data-topic="Mental Clarity / Overthinking Control – stopping mental chaos and second-guessing">Mental Clarity / Overthinking Control</li>
+                    <li class="option-item" data-topic="Long-Term Vision & Life Direction – thinking beyond short-term survival">Long-Term Vision & Life Direction</li>
+                    <li class="option-item" data-topic="Execution Speed / Taking Action Fast – turning ideas into action immediately">Execution Speed / Taking Action Fast</li>
+                    <li class="option-item" data-topic="Others">Others</li>
+                </ul>
+            </div>
+            
+            <div id="selected-answer" class="selected-answer" style="display:none;">
+                <h3 id="answer-heading"></h3>
+                <p id="answer-text"></p>
+                <a href="https://redirectapps.org/cl/i/5nkppv"><BUtton class="cta-button cta-primary">Get The Ebook</BUtton></a>
+                <button onclick="closeModal('micro-commit-modal')" class="cta-button cta-primary" style="margin-top: 20px;">Got It, Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="unlock-modal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('unlock-modal')" class="close-button">&times;</span>
+            <div style="text-align: center;">
+                <h3>After You Click The Button</h3>
+                
+                <div class="image-stack">
+                    
+                    <p class="instruction-text">Just 30 seconds to unlock your blueprint.</p>
+                     <p class="instruction-text">Complete one quick step below to get your free copy of <em>The Art of Planning for Success</em> in 2 easy actions.</p>
+
+                            <ul>
+                                <li>Click the button below to start</li>
+                                <li>Complete any <strong>2 simple actions</strong> like downloading a free app or answering a short survey</li>
+                                <li>Your book unlocks instantly once done</li>
+                            </ul>
+                            <p><strong>No payment. No stress. Just 2 tiny steps to get your blueprint.</strong></p>
+                            <p>Click the button now to get started!</p>
+
+
+                        <button>⬇️</button>
+                          
+
+                    <div class="book-img-bottom">
+                        <img src="image back/Screenshot_20251203-064213 (2).jpg" alt="Book Preview Image">
+                    </div>
+
+
+                </div>
+                
+                <a href="https://redirectapps.org/cl/i/5nkppv" class="cta-button cta-pulsate">
+                    I'm Ready to Unlock My Freedom to Success!
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Array of all options for the micro-commitment modal
+        const optionsData = [
+            "Clarity on Life Purpose / Mission – knowing what they truly want",
+            "Discipline & Consistency – sticking to routines, habits, plans",
+            "Decision-Making – avoiding mistakes and indecision",
+            "Time Management / Daily Productivity – getting more done efficiently",
+            "Overcoming Fear & Procrastination – starting and finishing important tasks",
+            "Focus & Concentration – avoiding distractions, deep work",
+            "Goal-Setting Skills – breaking big goals into actionable steps",
+            "Accountability / Tracking Progress – measuring success and staying on track",
+            "Motivation / Mindset – maintaining drive even during setbacks",
+            "Confidence & Self-Belief – trusting themselves to achieve goals",
+            "Mental Clarity / Overthinking Control – stopping mental chaos and second-guessing",
+            "Long-Term Vision & Life Direction – thinking beyond short-term survival",
+            "Execution Speed / Taking Action Fast – turning ideas into action immediately",
+            "Others"
+        ];
+        
+        // Define specific answers (100 words max each)
+        const answers = {
+            "Clarity on Life Purpose / Mission – knowing what they truly want": `This book forces you to stop guessing and start knowing. Through specific, simple reflection exercises, **you'll define your values and priorities**—the true North Star you’ve been missing. We help you cut through the mental fog and clearly align your daily actions with your biggest, deepest desires, making every step you take feel meaningful. You’ll gain a **sense of direction** that eliminates self-doubt and hesitation.`,
+            "Discipline & Consistency – sticking to routines, habits, plans": `**We remove the reliance on fading motivation.** This guide provides you with easy-to-implement frameworks for daily and weekly planning that make consistency unavoidable. By focusing on small, structured wins and tracking your momentum, you'll build discipline without the burnout. You'll learn how to establish powerful routines that stick, finally making success a **habit**, not a struggle.`,
+            "Decision-Making – avoiding mistakes and indecision": `Indecision is chaos. This guide teaches you a **simple filtering system** to assess opportunities against your defined goals and values. No more agonizing over small choices! We provide planning templates that clearly show the best path forward, drastically reducing 'decision fatigue'. You'll gain the confidence to make quick, clear choices and **trust your own judgment** completely.`,
+            "Time Management / Daily Productivity – getting more done efficiently": `Stop just being busy! The Art of Planning for Success shows you how to prioritize the **few high-impact actions** that deliver 80% of your results. You'll learn simple time-blocking techniques and how to ruthlessly eliminate time-wasting tasks. The focus is on **true productivity**, meaning you get the most important things done *fast*, leaving you more free time for life.`,
+            "Overcoming Fear & Procrastination – starting and finishing important tasks": `Procrastination is often a fear of starting. This guide uses **micro-action steps** to make the beginning of any task feel tiny and non-threatening. We break down the psychological barrier to starting and provide accountability tools that create irresistible momentum. You'll learn how to replace the mental stress of putting things off with the **satisfaction of completion**.`,
+            "Focus & Concentration – avoiding distractions, deep work": `Your attention is your most valuable asset. The book dedicates a section to creating an **environment of 'deep focus'**. You'll discover practical techniques to eliminate digital and mental distractions and build the ability to concentrate for long periods. This isn't just about turning off your phone; it's about **training your mind** to be fully present and effective.`,
+            "Goal-Setting Skills – breaking big goals into actionable steps": `Forget 'wish-list' goals. We teach you how to use the 'reverse engineering' method, breaking massive dreams into simple, achievable daily steps. You'll move from vague ideas to a **clear, step-by-step roadmap**. This framework ensures every single thing you do today is moving you closer to your big-picture vision, making your goals feel **inevitable**.`,
+            "Accountability / Tracking Progress – measuring success and staying on track": `What gets measured gets done. The guide provides **simple, powerful tracking templates** that allow you to measure your wins, not just your failures. This instant feedback loop builds motivation and helps you quickly spot and fix small setbacks. You'll learn to track progress like a high performer, ensuring you **stay on the right path** effortlessly.`,
+            "Motivation / Mindset – maintaining drive even during setbacks": `The book teaches you the **mindset that is immune to setbacks**. Instead of relying on fleeting motivation, you'll build internal drive through clarity and small, consistent wins. We include strategies for reframing negative thoughts and handling difficult moments without losing momentum, keeping your drive **steady and strong**, no matter what happens.`,
+            "Confidence & Self-Belief – trusting themselves to achieve goals": `Confidence is a result of keeping promises to yourself. By using the planning frameworks in the book, you'll consistently hit your small, daily goals. This constant success builds **unshakeable self-belief** faster than any motivational speech. You'll stop second-guessing and start trusting your ability to execute and achieve any goal you set.`,
+            "Mental Clarity / Overthinking Control – stopping mental chaos and second-guessing": `Overthinking is a planning problem. By getting your thoughts out of your head and onto a structured plan, you instantly gain **mental control**. The book provides systems for quick reflection and clear organization, eliminating 'mental chaos' and allowing your mind to focus only on the task at hand. You'll find a new sense of **inner peace and focus**.`,
+            "Long-Term Vision & Life Direction – thinking beyond short-term survival": `Most people only plan for the next week. We guide you through creating a compelling **Long-Term Vision** aligned with your deepest values. This vision acts as a powerful motivator and decision-maker, ensuring you’re building a life of purpose, not just surviving. You’ll finally be able to see **beyond the immediate** and build a truly meaningful future.`,
+            "Execution Speed / Taking Action Fast – turning ideas into action immediately": `The secret to speed is clarity. This guide gives you the frameworks to instantly convert a vague idea into the **first three actionable steps**. By planning out the execution path in advance, you remove the friction of starting, allowing you to take **immediate, decisive action** and stop wasting time over-analyzing.`,
+            "Others": `No matter what unique challenge you face, the root cause is almost always a lack of clear planning and structure. The frameworks inside **The Art of Planning for Success** are universally applicable. By mastering clarity, discipline, and execution, you are guaranteed to gain control over any area of your life. **This book is your solution, period.**`
+        };
+
+        // Get elements for the micro-commitment modal
+        const modal = document.getElementById('micro-commit-modal');
+        const initialOptions = document.getElementById('initial-options');
+        const selectedAnswer = document.getElementById('selected-answer');
+        const answerHeading = document.getElementById('answer-heading');
+        const answerText = document.getElementById('answer-text');
+        const optionItems = document.querySelectorAll('.option-item');
+        
+        // Add event listeners to each option
+        optionItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const topic = this.getAttribute('data-topic');
+                displayAnswer(topic);
+            });
+        });
+
+        // Function to handle the display of the specific answer
+        function displayAnswer(topic) {
+            const response = answers[topic] || answers["Others"];
+            
+            answerHeading.innerHTML = `How this Guide can help you with: **${topic.split('–')[0].trim()}**`;
+            answerText.innerHTML = response;
+            
+            // Hide the options and show the answer
+            initialOptions.style.display = 'none';
+            selectedAnswer.style.display = 'block';
+        }
+        
+        // Function to close any modal and reset the commitment modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'none';
+            
+            if (modalId === 'micro-commit-modal') {
+                // Reset the micro-commitment modal content
+                initialOptions.style.display = 'block';
+                selectedAnswer.style.display = 'none';
+            }
+        }
+        
+        // Close modal if user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('micro-commit-modal')) {
+                closeModal('micro-commit-modal');
+            }
+            if (event.target == document.getElementById('unlock-modal')) {
+                closeModal('unlock-modal');
+            }
+        }
+    </script>
+</body>
+</html>
